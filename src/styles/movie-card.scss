@@ -1,9 +1,15 @@
 .movie-card {
   position: relative;
+  transition: all .3s ease-in-out;
+  transform: scale(0.8);
 
   img {
-    width: 14.31rem;
+    width: 18.31rem;
     height: 21.25rem;
+  }
+  &:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(0.9);
   }
 
   > div {

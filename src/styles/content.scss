@@ -1,8 +1,14 @@
 .container {
-  max-width: 52.5rem;
+  max-width: 55.5rem;
   width: 100%;
 
-  margin: 0 auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+
 }
 
 header {
@@ -10,7 +16,7 @@ header {
     display: block;
     margin-top: 2rem;
 
-    font-size: 2.25rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--gray);
   }
@@ -25,9 +31,17 @@ main {
   margin-top: 5.625rem;
 
   .movies-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 4.75rem;
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  header {
+    span.category {
+      font-size: 2.25rem;
+    }
   }
 }

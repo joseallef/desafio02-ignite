@@ -4,16 +4,36 @@ nav.sidebar {
 
   align-items: center;
 
-  max-width: 24rem;
   width: 100%;
 
   padding: 2rem;
+  position: fixed;
+  z-index: 5;
+  bottom: 70px;
 
   background: var(--background2);
+  .sidebarMobile {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    bottom: 0px;
+    padding: 15px;
+    background: var(--background2);
+    z-index: 5;
+    border-radius: 25px 25px 0px 0px;
 
-  > span {
-    margin-bottom: 4.5rem;
-    font-size: 3rem;
+  }
+
+  .sidebarMobile span:first-child{
+    display: flex;
+    margin: 0;
+    height: 100%;
+
+  }
+
+  > .sidebarMobile span {
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--yellow);
 
@@ -28,5 +48,29 @@ nav.sidebar {
     flex-direction: column;
 
     width: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+    
+    max-width: 24rem;
+    position: relative;
+    z-index: 5;
+    bottom: 0px;
+    .sidebarMobile {
+      position: relative;
+      justify-content: center;
+      display: flex;
+      
+      width: 100%;
+      padding: 0;
+    }
+    .sidebarMobile span:first-child{
+      display: none;  
+    }
+
+    > .sidebarMobile span {
+        font-size: 3rem;
+        margin-bottom: 4.5rem;
+    }
   }
 }

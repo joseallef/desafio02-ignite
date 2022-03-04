@@ -5,7 +5,7 @@ import { ButtonHTMLAttributes } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
-  iconName: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
+  iconName: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family' | 'toggle';
   selected: boolean;
 }
 
